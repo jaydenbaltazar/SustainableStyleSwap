@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/gumby.jpeg" />
+    <title>Sustainable Style Swap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/indStyles.css" />
+    <meta name="description" content="Homepage for Sustainable Style Swap" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="group">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+            ></path>
+          </g>
+        </svg>
+        <form onsubmit="handleSearch(event)">
+          <input
+            id="searchInput"
+            placeholder="Type to Search"
+            type="search"
+            name="searched"
+            class="input"
+          />
+        </form>
+      </div>
+      <a title="Home" href="index.html">
+        <h1 class="web-name">Sustainable Style Swap</h1>
+      </a>
+      <button
+        class="hamburger"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        onclick="toggleMenu(this)"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <div class="navy">
+      <div class="menu">
+        <div class="item">
+          <a title="FILO clothing page" class="link" data-toggle="submenu">
+            <span> FILO </span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'FILO')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'FILO')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'FILO')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a
+            title="Earth Society clothing page"
+            class="link"
+            data-toggle="submenu"
+          >
+            <span> Earth Society </span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'Earth Society')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'Earth Society')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'Earth Society')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a title="LASO clothing page" class="link" data-toggle="submenu">
+            <span> LASO</span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'LASO')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'LASO')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'LASO')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a title="PRIDE clothing page" class="link" data-toggle="submenu">
+            <span> PRIDE </span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'PRIDE')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'PRIDE')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'PRIDE')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <hr style="border: 2px solid #ffc222" />
+      <section id="info" class="info-section">
+        <div>
+          <h2>UEJC Presents: Sustainable Style Swap</h2>
+          <p>
+            Join the United Equity & Justice Collective’s Community Outreach
+            committee for our Earth Day Flea Market & All-Gender Clothing Swap
+            on April 23rd from 12–2 PM at Kingsmen Park! Celebrate
+            sustainability and community by exploring tables hosted by clubs
+            offering free clothing. It's a great chance to promote eco-friendly
+            fashion, support your peers, and connect with others on campus. ✨
+            Want a sneak peek? Check out our website to browse some of the
+            clothing available!
+          </p>
+        </div>
+      </section>
+
+      <div style="padding: 15px 0">
+        <hr style="border: 2px solid #ffc222; width: 80%; margin: 0 auto" />
+      </div>
+
+      <section id="clothing-options-section" class="clothing-options">
+        <div class="clothing-container">
+          <h2>Here Are Some of the Clothing Options</h2>
+          <p>
+            Come check out all the cool clothes we’ve got—there’s something for
+            everyone! Whether you’re looking for something chill or something
+            fresh for your next event, you might just find a hidden gem.
+          </p>
+
+          <div class="clothing-features">
+            <div class="card">
+              <div class="image">
+                <img
+                  src="images/clothes/filo/brownHockeyShirt.jpg"
+                  alt="Brown Hockey Shirt"
+                  class="image"
+                />
+              </div>
+              <span class="title"></span>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img
+                  src="images/clothes/filo/winterQuarterZip.JPG"
+                  alt="Winter Quarter Zip"
+                  class="image"
+                />
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img
+                  src="images/clothes/filo/camoPants.jpg"
+                  alt="Camo Pants"
+                  class="image"
+                />
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img
+                  src="images/clothes/filo/newcastleJersey.jpg"
+                  alt="Newcastle United Jersey"
+                  class="image"
+                />
+              </div>
+              <span class="title"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div style="padding: 15px 0">
+        <hr style="border: 2px solid #ffc222; width: 80%; margin: 0 auto" />
+      </div>
+
+      <section id="mission-statement-section" class="mission-statement">
+        <div class="mission-container">
+          <div class="mission-content">
+            <!-- Left side with stacked images -->
+            <div class="mission-images">
+              <img
+                src="images/dogsss.png"
+                alt="Dog with drippy clothes"
+                class="mission-image"
+              />
+              <img
+                src="images/kittysss.png"
+                alt="Kitty with drippy clothes"
+                class="mission-image"
+              />
+            </div>
+
+            <!-- Right side with text content -->
+            <div class="mission-text">
+              <div class="miss-text">
+                <h2>Mission Statement</h2>
+                <p>
+                  The Sustainable Style Swap is rooted in the United Equity &
+                  Justice Collective’s mission to build a stronger, more
+                  connected community. Led by the Community Outreach & Impact
+                  Subcommittee, this event champions sustainability by
+                  encouraging clothing reuse and reducing waste—while also
+                  creating a space where clubs, students, and local groups can
+                  come together to support one another. Through this initiative,
+                  we aim to increase access to resources, foster collaboration
+                  across communities, and celebrate the collective power we have
+                  to care for both people and the planet.
+                </p>
+
+                <h2>How it Works</h2>
+                <p>
+                  Just swing by Kingsmen Park on Wednesday, April 23rd from 12–2
+                  PM, browse around, and grab any piece of clothing that catches
+                  your eye—it’s all free! No need to bring anything but good
+                  vibes and maybe a friend or two.
+                </p>
+              </div>
+
+              <div class="drop">
+                <h2>Community Outreach Committee</h2>
+                <div class="dropdown">
+                  <input
+                    hidden=""
+                    class="sr-only"
+                    name="state-dropdown"
+                    id="state-dropdown"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="dropdown scrollbar"
+                    for="state-dropdown"
+                    class="trigger"
+                    >Anny Zermeno</label
+                  >
+                  <ul class="list webkit-scrollbar" role="list" dir="auto">
+                    <li class="listitem" role="listitem">
+                      <article class="article">
+                        <h5>Anny Zermeno</h5>
+                        <p>
+                          Hello! I am one of the members of the community impact
+                          committee, we created this event to promote
+                          environmentally sustainability within the California
+                          Lutheran community. I hope everyone gets to enjoy this
+                          event, grab some awesome clothes, and learn something
+                          new.
+                        </p>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+
+                <div style="padding: 15px 0">
+                  <hr
+                    style="
+                      border: 2px solid #ffc222;
+                      width: 100%;
+                      margin: 0 auto;
+                    "
+                  />
+                </div>
+                <div class="dropdown">
+                  <input
+                    hidden=""
+                    class="sr-only"
+                    name="state-dropdown"
+                    id="state2-dropdown"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="dropdown scrollbar"
+                    for="state2-dropdown"
+                    class="trigger"
+                    >Jayden Baltazar
+                  </label>
+                  <ul class="list webkit-scrollbar" role="list" dir="auto">
+                    <li class="listitem" role="listitem">
+                      <article class="article">
+                        <h5>Jayden Baltazar</h5>
+                        <p>
+                          I am one of the three people who organized and created
+                          this event. I hope this event will build community and
+                          bring about positive vibes among the students. I
+                          created this website as a way to to build excitement
+                          for the event and to showcase some of the clothing
+                          that will be available. I hope you enjoy the event and
+                          find some cool clothes to take home!
+                        </p>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+
+                <div style="padding: 15px 0">
+                  <hr
+                    style="
+                      border: 2px solid #ffc222;
+                      width: 100%;
+                      margin: 0 auto;
+                    "
+                  />
+                </div>
+
+                <div class="dropdown">
+                  <input
+                    hidden=""
+                    class="sr-only"
+                    name="state-dropdown"
+                    id="state3-dropdown"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="dropdown scrollbar"
+                    for="state3-dropdown"
+                    class="trigger"
+                    >Vince Venkat</label
+                  >
+                  <ul class="list webkit-scrollbar" role="list" dir="auto">
+                    <li class="listitem" role="listitem">
+                      <article class="article">
+                        <h5>Vince Venkat</h5>
+                        <p>
+                          I am one of the three organizers of this event. I hope
+                          that we can create a sense of community and introduce
+                          more people to the UEJC and what it stands for. I hope
+                          that the three of us can use this event to reach as
+                          many of you as possible and I hope you enjoy the
+                          event.
+                        </p>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="padding: 15px 0">
+                <hr
+                  style="border: 2px solid #ffc222; width: 100%; margin: 0 auto"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 15px 0">
+            <hr
+              style="border: 2px solid #ffc222; width: 100%; margin: 0 auto"
+            />
+          </div>
+        </div>
+      </section>
+      <hr style="border: 2px solid #ffc222" />
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Sustainable Style Swap. All Rights Reserved.</p>
+        <div class="social-links">
+          <a
+            title="Facebook of California Lutheran University"
+            href="https://www.facebook.com/callutheran"
+            target="_blank"
+            ><img src="images/socials/facebook.png" alt="Facebook"
+          /></a>
+          <a
+            title="Twitter of California Lutheran University"
+            href="https://x.com/callutheran"
+            target="_blank"
+            ><img src="images/socials/twitter.png" alt="Twitter"
+          /></a>
+          <a
+            title="Instagram of California Lutheran University"
+            href="https://www.instagram.com/callutheran"
+            target="_blank"
+            ><img src="images/socials/instagram.png" alt="Instagram"
+          /></a>
+          <a
+            title="LinkedIn of California Lutheran University"
+            href="https://www.linkedin.com/school/california-lutheran-university/posts/"
+            target="_blank"
+            ><img src="images/socials/linkedin.png" alt="LinkedIn"
+          /></a>
+          <a
+            title="TikTok of California Lutheran University"
+            href="https://www.tiktok.com/@callutheran"
+            target="_blank"
+            ><img src="images/socials/tiktok.png" alt="TikTok"
+          /></a>
+          <a
+            title="Youtube of California Lutheran University"
+            href="https://www.youtube.com/user/callutheran"
+            target="_blank"
+            ><img src="images/socials/youtube.png" alt="YouTube"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+      // Call appropriate page initializer
+      if (window.location.pathname.includes("collection.html")) {
+        initCollectionPage();
+      } else if (window.location.pathname.includes("product.html")) {
+        initProductPage();
+      }
+    </script>
+  </body>
+</html>

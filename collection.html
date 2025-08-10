@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/gumby.jpeg" />
+    <title>Sustainable Style Swap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/prPageStyles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="group">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path
+            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+          ></path>
+        </svg>
+        <form onsubmit="handleSearch(event)">
+          <input
+            id="searchInput"
+            placeholder="Type to Search"
+            type="search"
+            class="input"
+          />
+        </form>
+      </div>
+      <a title="Homepage for Sustainable Style Swap" href="index.html">
+        <h1 class="web-name">Sustainable Style Swap</h1>
+      </a>
+      <button
+        class="hamburger"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        onclick="toggleMenu(this)"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <div class="navy">
+      <div class="menu">
+        <div class="item">
+          <a title="FILO clothing page" class="link" data-toggle="submenu">
+            <span> FILO </span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'FILO')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'FILO')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'FILO')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a
+            title="Earth Society clothing page"
+            class="link"
+            data-toggle="submenu"
+          >
+            <span> Earth Society </span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'Earth Society')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'Earth Society')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'Earth Society')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a title="LASO clothing page" class="link" data-toggle="submenu">
+            <span> LASO</span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'LASO')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'LASO')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'LASO')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a title="PRIDE clothing page" class="link" data-toggle="submenu">
+            <span> PRIDE </span>
+            <svg viewBox="0 0 360 360">
+              <path
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001L165,218.787 25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.393l150-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+            </svg>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(1, 'PRIDE')"
+              >
+                Tops
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(2, 'PRIDE')"
+              >
+                Bottoms
+              </button>
+            </div>
+            <div class="submenu-item">
+              <button
+                class="submenu-link"
+                onclick="navigateToCategory(3, 'PRIDE')"
+              >
+                Outerwear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: 2px solid #ffc222" />
+    <main>
+      <h1 id="page-title" style="padding: 20px 100px; color: #3b2360">
+        Loading...
+      </h1>
+      <div style="padding: 5px 15px 10px">
+        <hr style="border: 2px solid #ffc222; width: 90%; margin: 0 auto" />
+      </div>
+
+      <div class="container">
+        <div id="main-content" class="product-grid"></div>
+      </div>
+
+      <hr style="border: 2px solid #ffc222" />
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Sustainable Style Swap. All Rights Reserved.</p>
+        <div class="social-links">
+          <a
+            title="Facebook of California Lutheran University"
+            href="https://www.facebook.com/callutheran"
+            target="_blank"
+            ><img src="images/socials/facebook.png" alt="Facebook"
+          /></a>
+          <a
+            title="Twitter of California Lutheran University"
+            href="https://x.com/callutheran"
+            target="_blank"
+            ><img src="images/socials/twitter.png" alt="Twitter"
+          /></a>
+          <a
+            title="Instagram of California Lutheran University"
+            href="https://www.instagram.com/callutheran"
+            target="_blank"
+            ><img src="images/socials/instagram.png" alt="Instagram"
+          /></a>
+          <a
+            title="LinkedIn of California Lutheran University"
+            href="https://www.linkedin.com/school/california-lutheran-university/posts/"
+            target="_blank"
+            ><img src="images/socials/linkedin.png" alt="LinkedIn"
+          /></a>
+          <a
+            title="TikTok of California Lutheran University"
+            href="https://www.tiktok.com/@callutheran"
+            target="_blank"
+            ><img src="images/socials/tiktok.png" alt="TikTok"
+          /></a>
+          <a
+            title="Youtube of California Lutheran University"
+            href="https://www.youtube.com/user/callutheran"
+            target="_blank"
+            ><img src="images/socials/youtube.png" alt="YouTube"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+      // Call appropriate page initializer
+      if (window.location.pathname.includes("collection.html")) {
+        initCollectionPage();
+      } else if (window.location.pathname.includes("product.html")) {
+        initProductPage();
+      }
+    </script>
+  </body>
+</html>
