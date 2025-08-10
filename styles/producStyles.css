@@ -1,0 +1,535 @@
+/* Basic reset for margin and padding FOR THE PRODUCT.JSP */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the body take up the full height of the page */
+body {
+    font-family: "Titillium Web", serif;
+    height: auto; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced correctly */
+}
+
+
+a, button {
+    text-decoration: none; /* Removes the underline */
+    color: white; /* Changes the text color to white */
+    outline: none; /* Removes the outline when the link is focused */
+}
+
+a, button:hover,
+a, button:focus,
+a, button:active {
+    color: white; /* Ensure color stays white on hover, focus, and active */
+    text-decoration: none; /* Ensure underline is still removed */
+    background-color: transparent; /* Optional: Adjust background color */
+}
+
+/*Fonts*/
+.titillium-web-bold-italic {
+    font-family: "Titillium Web", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Header*/
+.header {
+    font-family: "Titillium Web", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px; /* Increased padding for more space inside the header */
+    background-color: #3B2360;
+    position: relative;
+    height: 150px; /* Set a specific height for the header */
+}
+/* Website Name */
+.web-name {
+    font-size: 72px; /* Default large font size */
+    text-align: center;
+    color: #ffffff;
+    font-style: italic;
+}
+
+/* Search Bar */
+.group {
+    background-color: #3B2360;
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    max-width: 250px; /* Maximum width for the search bar */
+    position: absolute;
+    left: 40px; /* Positioning */
+    padding: 12px 20px; /* Padding for better spacing */
+    font-size: 20px; /* Font size for the search bar */
+}
+
+.input {
+    width: 100%;
+    height: 50px; /* Height for the input */
+    line-height: 50px; /* Aligns the text vertically */
+    padding: 0 1.5rem; /* Padding inside the input */
+    padding-left: 3rem; /* Extra space on the left for the icon */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    background-color: #3B2360;
+    color: #ffffff;
+    font-size: 18px;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #3B2360;
+    font-size: 18px; /* Placeholder font size */
+}
+
+.input:focus, input:hover {
+    outline: none;
+    border-color: #FFC222;
+    background-color: #3B2360;
+    box-shadow: 0 0 0 4px rgba(255, 228, 140, 0.53);
+}
+
+.icon {
+    position: absolute;
+    left: 1.5rem; /* Position for the icon */
+    fill: #ffffff;
+    width: 1.5rem; /* Icon size */
+    height: 1.5rem; /* Icon size */
+}
+
+/* Nav Bar Styling */
+/* Navigation Bar */
+.navy {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #6A4C92;
+    justify-content: center;
+    gap: 7.5px;
+    padding: 15px 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* From Uiverse.io by gharsh11032000 drop Down Menu */
+.menu {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "Titillium Web", serif;
+    color: #ffffff;
+    width: fit-content;
+    display: flex;
+    list-style: none;
+    background: #6A4C92;
+}
+
+.menu a, button {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background: #6A4C92;
+}
+
+.menu a, button:hover {
+    background: #FFC222;
+}
+
+.menu .link {
+    background: #6A4C92;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link svg {
+    width: 14px;
+    height: 14px;
+    fill: #FFC222;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .item {
+    position: relative;
+}
+
+.menu .item .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    border-radius: 0 0 16px 16px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-12px);
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+    pointer-events: none;
+    list-style: none;
+}
+
+.menu .item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    border-color: #6A4C92;
+}
+
+
+.menu .item:hover .link {
+    color: #ffffff;
+    border-radius: 16px 16px 0 0;
+}
+
+.menu .item:hover .link::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.menu .item:hover .link svg {
+    fill: #6A4C92;
+    transform: rotate(-180deg);
+}
+
+.submenu .submenu-item {
+    width: 100%;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link {
+    display: block;
+    padding: 12px 24px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Submenu link hover: turns yellow */
+.submenu .submenu-link:hover {
+    background-color: #FFC222; /* Yellow background */
+    color: #000000; /* Black text for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Remove or modify the `::before` pseudo-element for hover effect */
+.submenu .submenu-link:hover:before {
+    transform: none; /* Disable scale effect if desired */
+    background-color: transparent; /* Ensure yellow background is visible */
+}
+
+.submenu .submenu-item:last-child .submenu-link {
+    border-bottom: none;
+}
+
+.submenu .submenu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    background-color: #6A4C92;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link:hover:before {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.submenu .submenu-link:hover {
+    color: #ffffff;
+}
+
+.menu .link.hide-arrow svg {
+    display: none;
+} 
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 1000px;
+    height: auto;
+    position: relative;
+    border: 4px solid transparent;
+    box-shadow: 0 0 12px 2px rgba(255, 194, 34, 0.7), 0 0 24px 4px rgba(255, 194, 34, 0.5);
+}
+
+.product-image-section {
+    flex: 1; /* Make the image section take up half the card */
+    max-width: 50%;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px; /* Add padding between image and info */
+}
+
+.product-image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px; /* Add margin to the bottom of the image */
+}
+
+.product-image-section form {
+    margin-top: 10px; /* Add margin to the top of the button */
+}
+
+.product-info-section {
+    flex: 1; /* Make the info section take up half the card */
+    max-width: 50%;
+    padding-left: 20px; /* Padding to separate from the image */
+}
+
+.product-info-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #3B2360;
+}
+
+.description {
+    font-size: 18px;
+    color: #3B2360;
+    margin-bottom: 15px;
+}
+
+.details{
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    color: #3B2360;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    font-family: "Titillium Web", serif;
+    background-color: #3B2360;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .web-name { font-size: 48px; }
+    .group { max-width: 200px; left: 20px; padding: 10px 15px; }
+    .input { font-size: 16px; padding-left: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .menu .link svg {
+        display: none; /* hide arrow on mobile */
+      }
+    
+      .menu .item .submenu {
+        position: static;         /* stack below the menu */
+        opacity: 1 !important;    /* always visible */
+        visibility: visible !important;
+        transform: none !important;
+        pointer-events: auto;
+        border: none;
+        display: none;            /* hide by default */
+      }
+    
+      .menu .item .submenu.open {
+        display: flex;            /* show when toggled */
+      }
+
+    .hamburger {
+        display: flex;
+      }
+    
+      .menu {
+        display: none;
+      }
+    
+      .menu.show {
+        display: flex;
+      }
+      
+    .product-image-section {
+        max-width: 90%;
+        padding-right: 0;
+    }
+    
+    .product-image-section form {
+        margin-top: 10px; /* Add margin to the top of the button */
+    }
+    .product-info-section {
+        padding-left: 0;
+        max-width: 90%;
+    }
+    .product-container{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header{
+        height: 70px;
+    }
+    .navy{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu .item .submenu {
+        border-radius: 16px 16px 16px 16px;
+        position: static;
+        transform: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        max-height: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .menu .item .submenu.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        max-height: 500px; /* Enough space for menu items */
+   }
+    
+      .menu .link {
+        cursor: pointer;
+      }
+    .web-name { font-size: 24px; }
+    .group { max-width: 100px; left: 10px; padding: 8px 12px; }
+    .input { font-size: 14px; height: 40px; }
+    .navy { flex-direction: column; padding: 10px; }
+}
+
+@media (max-width: 480px) {
+    .web-name { font-size: 18px; }
+    .group { max-width: 100px; left: 5px; padding: 6px 10px; }
+    .input { font-size: 12px; height: 35px; padding-left: 2rem; }
+    .icon { width: 1rem; height: 1rem; }
+    .product-image-section img {
+        width: 100%;
+        height: auto;
+    }
+}
+
